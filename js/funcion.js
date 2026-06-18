@@ -104,7 +104,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 const voz =
                 new SpeechSynthesisUtterance(texto);
 
-                voz.lang = "en-EN";
+                voz.lang = "es-CO";
 
                 speechSynthesis.speak(voz);
             });
@@ -395,7 +395,7 @@ function hablar(texto) {
     const wave = document.getElementById("voiceWave");
     const voz = new SpeechSynthesisUtterance(texto);
 
-    voz.lang = "en-EN";
+    voz.lang = "es-CO";
     // voz.rate = 1;
     // voz.pitch = 1;
 
@@ -444,7 +444,7 @@ function mostrarArea(
             "Este es el área de " + titulo + "Encargada de " + descripcion + " Y las herramientas más utilizadas son: " + herramientas
         );
 
-    voz.lang = "en-EN";
+    voz.lang = "es-CO";
 
     speechSynthesis.cancel();
     speechSynthesis.speak(voz);
