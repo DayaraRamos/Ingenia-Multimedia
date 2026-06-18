@@ -114,6 +114,7 @@ document.addEventListener("DOMContentLoaded", () => {
 const audio = document.getElementById("audioNIA");
 const wave = document.getElementById("voiceWave");
 
+if(audio && wave){
 audio.addEventListener("play", () => {
     wave.classList.add("active");
 });
@@ -125,6 +126,12 @@ audio.addEventListener("ended", () => {
 audio.addEventListener("pause", () => {
     wave.classList.remove("active");
 });
+
+}
+
+
+
+
 
     // ======================================
     // TARJETAS ÁREAS
