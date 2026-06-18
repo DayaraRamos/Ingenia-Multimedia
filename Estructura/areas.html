@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../Elementos/iconos/LogoIngMul.png" type="image/x-icon">
+
+    <title>Ingenia Multimedia</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+
+<body>
+
+    <!-- ========================= -->
+    <!-- ENCABEZADO / NAVBAR -->
+    <!-- ========================= -->
+
+    <header class="header">
+
+        <nav class="navbar">
+
+            <div class="logo">
+                <img src="../elementos/iconos/LogoIngMul.png" alt="Logo Ingenia Multimedia">
+
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../Estructura/fundamentos.html">Fundamentos</a></li>
+                <li><a href="../Estructura/areas.html">Áreas</a></li>
+                <li><a href="../Estructura/herramientas.html">Herramientas</a></li>
+                <li><a href="../Estructura/proceso.html">Proceso</a></li>
+                <li><a href="../Estructura/laboratorio.html">Laboratorio</a></li>
+                <li><a href="../Estructura/quiz.html">Quiz</a></li>
+                <li><a href="../Estructura/creditos.html">Créditos</a></li>
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <!-- ========================= -->
+    <!-- 03. ÁREAS -->
+    <!-- ========================= -->
+
+    <!-- <section id="areas" class="section">
+
+        <h2>Campos de Acción Profesional</h2>
+
+        <div class="cards-container">
+
+            <div class="card"
+            data-info="Desarrollo de sitios web, aplicaciones y plataformas digitales.">
+            <img src="../elementos/iconos/web.png" alt="Desarrollo Web">
+            Desarrollo Web</div>
+
+            <div class="card"
+            data-info="Diseño Digital: Creación de contenido visual, interfaces y experiencias gráficas.">
+            <img src="../elementos/iconos/diseno.png" alt="Diseño Digital">
+            <br>Diseño Digital</div>
+
+            <div class="card"
+            data-info="Producción Audiovisual: Producción y edición de videos, animaciones y contenido audiovisual.">
+            <img src="../elementos/iconos/produccion.png" alt="Producción Audiovisual">
+            Producción Audiovisual</div>
+
+            <div class="card"
+            data-info="Animación 2D y 3D: Diseño y modelado de personajes, escenarios y objetos 2D Y 3D.">
+            <img src="../elementos/iconos/animacion.png" alt="Animación 2D y 3D">
+            Animación 2D y 3D</div>
+
+            <div class="card"
+            data-info="Videojuegos: Desarrollo de videojuegos interactivos para diferentes plataformas.">
+            <img src="../elementos/iconos/videojuegos.png" alt="Videojuegos">
+            Videojuegos</div>
+
+        </div>
+
+        <div class="info-panel">
+
+            <p id="infoArea">
+                Selecciona un área para conocer más información.
+            </p>
+
+        </div>
+
+    </section> -->
+
+    <section id="areas" class="section"><div class="voice-wave active" id ="voiceWave">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <h2>Campos de Acción Profesional</h2>
+
+    <div class="areas-layout">
+
+        <!-- Menú de áreas -->
+
+        <div class="areas-menu">
+
+            <div class="card"
+                onclick="mostrarArea(
+                'Desarrollo Web',
+                '../elementos/videos/2.mp4',
+                'Creación de sitios web, aplicaciones y plataformas digitales.',
+                'HTML, CSS, JavaScript, React, entre otros')">
+                <img class="icons-area"src="../elementos/iconos/web.png" alt="Desarrollo Web">
+                <br>Desarrollo Web
+
+            </div>
+
+            <div class="card"
+                onclick="mostrarArea(
+                'Diseño Digital',
+                '../elementos/videos/1.mp4',
+                'Diseño de interfaces, identidad visual y experiencia de usuario.',
+                'Figma, Photoshop, Illustrator, entre otros')">
+                <img class="icons-area" src="../elementos/iconos/diseño.png" alt="Diseño Digital">
+                <br>Diseño Digital
+
+            </div>
+
+            <div class="card"
+                onclick="mostrarArea(
+                'Producción Audiovisual',
+                '../elementos/videos/produccion.mp4',
+                'Creación y edición de contenido audiovisual.',
+                'Premiere Pro, After Effects, Audition, entre otros')">
+                <img class="icons-area" src="../elementos/iconos/produccion.png" alt="Producción Audiovisual">
+                <br>Producción Audiovisual
+
+            </div>
+
+            <div class="card"
+                onclick="mostrarArea(
+                'Animación 2D y 3D', 
+                '../elementos/videos/3dy2d.mp4',
+                'Modelado y animación de personajes y escenarios.',
+                'Blender, Maya, Cinema 4D, entre otros')">
+                <img class="icons-area" src="../elementos/iconos/animacion.png" alt="Animación 2D y 3D">
+                <br>Animación 2D y 3D
+
+            </div>
+
+            <div class="card"
+                onclick="mostrarArea(
+                'Videojuegos', 
+                '../elementos/videos/videojueguitos.mp4',
+                'Desarrollo de experiencias interactivas y videojuegos.',
+                'Unity, Unreal Engine, C chard, entre otros')">
+                <img class="icons-area" src="../elementos/iconos/videogames.png" alt="Videojuegos">
+                <br>Videojuegos
+
+            </div>
+
+            <div class="card"
+                onclick="mostrarArea(
+                'aplicaciones móviles', 
+                '../elementos/videos/moviles.mp4',
+                'Desarrollo de aplicaciones móviles para Android e iOS.',
+                'flutter, react native, java, entre otros')">
+                <img class="icons-area" src="../elementos/iconos/mobile.png" alt="aplicaciones móviles">
+                <br>aplicaciones móviles
+
+            </div>
+
+        </div>
+
+        <!-- Panel dinámico -->
+
+        <div class="area-info">
+
+            <video
+            id="areaVideo"
+            autoplay
+            muted
+            loop
+            playsinline>
+        </video>
+
+        <!-- <source
+        src="../elementos/videos/2.mp4"
+        type="video/mp4"> -->
+
+            <!-- <img
+                id="areaImagen"
+                src="../elementos/areas/web.png"
+                alt="Área Multimedia"> -->
+
+            <h3 id="areaTitulo">
+                Desarrollo Web
+            </h3>
+
+            <p id="areaDescripcion">
+                Creación de sitios web, aplicaciones y plataformas digitales.
+            </p>
+
+            <div class="area-tools">
+
+                <h4>Herramientas utilizadas</h4>
+
+                <p id="areaHerramientas">
+                    HTML, CSS, JavaScript, React
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    
+
+    <div class="nia-fixed">
+                <div class="nia-message">
+                    <p>
+                        Hola, soy NIA
+                    </p>
+</div>
+                <div class="avatar-placeholder">
+                    <img src="../elementos/avatar/NIA.png" alt="Avatar NIA">
+                </div>
+</div>
+
+</section>
+    
+
+    <!-- JS -->
+    <script src="../js/funcion.js"></script>
+
+</body>
+
+</html>
