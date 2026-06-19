@@ -449,3 +449,166 @@ function mostrarArea(
     speechSynthesis.cancel();
     speechSynthesis.speak(voz);
 }
+
+function mostrarTecnologia(
+    titulo,
+    descripcion,
+    icono
+){
+    document.getElementById("techTitulo").textContent =
+    icono + " " + titulo;
+
+    document.getElementById("techDescripcion").textContent=
+    descripcion;
+
+    hablar(descripcion);
+}
+
+function mostrarMultimedia(tipo){
+
+    const contenedor =
+    document.getElementById("multimediaContenido");
+
+    if(tipo === "imagen"){
+
+        contenedor.innerHTML = `
+            <img src="../elementos/imagenes/multiimg.png">
+            <p>
+                Las imágenes permiten comunicar información visual de forma rápida y efectiva.
+            </p>
+        `;
+
+        hablar("Las imágenes son uno de los recursos multimedia más utilizados.");
+
+    }
+
+    else if(tipo === "audio"){
+
+        contenedor.innerHTML = `
+            <h3>🔊 Recurso de Audio</h3>
+            <p>
+                NIA está reproduciendo una explicación mediante síntesis de voz.
+            </p>
+        `;
+
+        hablar("El audio facilita la comunicación y mejora la experiencia de aprendizaje.");
+
+    }
+
+    else if(tipo === "video"){
+
+        contenedor.innerHTML = `
+            <video autoplay muted loop controls>
+                <source src="../elementos/videos/ani2.mp4" type="video/mp4">
+            </video>
+
+            <p>
+                Los videos integran imagen, movimiento y sonido.
+            </p>
+        `;
+
+        hablar("Los videos permiten transmitir información de forma dinámica.");
+
+    }
+
+    else if(tipo === "animacion"){
+
+    contenedor.innerHTML = `
+
+        <div class="equalizer">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <h3>✨ Animación Multimedia</h3>
+
+        <p>
+            Las animaciones aportan dinamismo, interactividad y una mejor experiencia visual al usuario.
+        </p>
+
+    `;
+
+    hablar("Las animaciones aportan dinamismo y atractivo visual.");
+}
+}
+
+function mostrarPerfil(tipo){
+
+    const titulo =
+    document.getElementById("perfilTitulo");
+
+    const descripcion =
+    document.getElementById("perfilDescripcion");
+
+    switch(tipo){
+
+        case "web":
+
+            titulo.textContent =
+            "💻 Desarrollo Web";
+
+            descripcion.textContent =
+            "Te interesa la programación, la creación de sitios web y las experiencias digitales interactivas.";
+
+            hablar(descripcion.textContent);
+
+        break;
+
+        case "diseno":
+
+            titulo.textContent =
+            "🎨 Diseño Digital";
+
+            descripcion.textContent =
+            "Te atrae la creatividad visual, la experiencia de usuario y el diseño de interfaces.";
+
+            hablar(descripcion.textContent);
+
+        break;
+
+        case "video":
+
+            titulo.textContent =
+            "🎬 Producción Audiovisual";
+
+            descripcion.textContent =
+            "Disfrutas contar historias mediante video, sonido y edición multimedia.";
+
+            hablar(descripcion.textContent);
+
+        break;
+
+        case "juegos":
+
+            titulo.textContent =
+            "🎮 Desarrollo de Videojuegos";
+
+            descripcion.textContent =
+            "Te apasiona crear experiencias interactivas, mundos virtuales y entretenimiento digital.";
+
+            hablar(descripcion.textContent);
+
+        break;
+    }
+}
+
+function irAlQuiz(){
+
+    hablar(
+        "Excelente trabajo. Has finalizado el laboratorio multimedia. Ahora puedes comenzar el quiz."
+    );
+
+    setTimeout(() => {
+
+        window.location.href =
+        "../Estructura/quiz.html";
+
+    }, 4000);
+
+}

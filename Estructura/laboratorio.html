@@ -45,14 +45,30 @@
 
     </header>
 
+    <!-- BARRA DE PROGRESO -->
+     <div class="lab-sidebar">
+
+    <!-- <a href="#laboratorio">🎨 Áreas</a> -->
+
+    <a href="#construccion">🏗️ Construcción</a>
+
+    <a href="#multimedia">🎥 Multimedia</a>
+
+    <a href="#perfil">🎯 Perfil</a>
+
+    <a href="#quizfinal">🚀 Quiz</a>
+
+</div>
+
 
      <!-- ========================= -->
     <!-- 06. LABORATORIO -->
     <!-- ========================= -->
 
-    <section id="laboratorio" class="section">
+    <!-- <section id="laboratorio" class="section" >
 
-        <h2>Laboratorio de Experiencias Multimedia</h2>
+        <h2 class="labsec2">Laboratorio de Experiencias Multimedia</h2>
+        <p class="intro-lab">Experimenta con diferentes recursos multimedia utiizados por un Ingeniero Multimedia</p>
 
         <div class="video-placeholder">
 
@@ -86,7 +102,200 @@
                 </div>
 </div>
 
-    </section>
+    </section> -->
+
+    <!-- Seccion como fue construido Ingenia Multimedia -->
+
+    <section class="construccion-proyecto" id="construccion">
+
+    <h2 class="titulosecdos">¿Cómo fue construido Ingenia Multimedia?</h2>
+
+    <p class="intro-construccion">
+        Descubre las tecnologías que hicieron posible el desarrollo de este recurso educativo multimedia.
+    </p>
+
+    <div class="tecnologias-container">
+
+        <div class="tech-card"
+            onclick="mostrarTecnologia(
+            'HTML',
+            'HTML estructura todo el contenido del sitio web. Gracias a él se organizan textos, imágenes, videos y secciones.',
+            '🌐')">
+
+            🌐 HTML
+
+        </div>
+
+        <div class="tech-card"
+            onclick="mostrarTecnologia(
+            'CSS',
+            'CSS permite diseñar la apariencia visual del proyecto mediante colores, animaciones, tamaños y distribución de elementos.',
+            '🎨')">
+
+            🎨 CSS
+
+        </div>
+
+        <div class="tech-card"
+            onclick="mostrarTecnologia(
+            'JavaScript',
+            'JavaScript proporciona interactividad, efectos dinámicos y comunicación entre los elementos de la página.',
+            '⚙️')">
+
+            ⚙️ JavaScript
+
+        </div>
+
+    </div>
+
+    <div class="tech-info">
+
+        <h3 id="techTitulo">
+            Selecciona una tecnología
+        </h3>
+
+        <p id="techDescripcion">
+            Haz clic sobre una tarjeta para conocer su función dentro del proyecto.
+        </p>
+
+    </div>
+
+</section>
+
+<section class="multimedia-accion" id="multimedia">
+
+    <h2 class="titulosecdos">Multimedia en Acción</h2>
+
+    <p class="intro-construccion">
+        Experimenta los diferentes recursos multimedia utilizados en el desarrollo de experiencias digitales.
+    </p>
+
+    <div class="multimedia-botones">
+
+        <button onclick="mostrarMultimedia('imagen')">
+            🖼 Imagen
+        </button>
+
+        <button onclick="mostrarMultimedia('audio')">
+            🔊 Audio
+        </button>
+
+        <button onclick="mostrarMultimedia('video')">
+            📽 Video
+        </button>
+
+        <button onclick="mostrarMultimedia('animacion')">
+            ✨ Animación
+        </button>
+
+    </div>
+
+    <div class="multimedia-panel">
+
+        <div id="multimediaContenido">
+
+            <p>
+                Selecciona un recurso multimedia para visualizarlo.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="perfil-multimedia" id="perfil">
+
+    <h2 class="titulosecdos">Descubre tu Perfil Multimedia</h2>
+
+    <p class="intro-construccion">
+        Selecciona la actividad que más te gustaría realizar.
+    </p>
+
+    <div class="perfil-opciones">
+
+        <button onclick="mostrarPerfil('web')">
+            💻 Programar sitios web
+        </button>
+
+        <button onclick="mostrarPerfil('diseno')">
+            🎨 Diseñar interfaces
+        </button>
+
+        <button onclick="mostrarPerfil('video')">
+            🎬 Editar videos
+        </button>
+
+        <button onclick="mostrarPerfil('juegos')">
+            🎮 Crear videojuegos
+        </button>
+
+    </div>
+
+    <div class="perfil-resultado">
+
+        <h3 id="perfilTitulo">
+            Tu resultado aparecerá aquí
+        </h3>
+
+        <p id="perfilDescripcion">
+            Selecciona una opción para descubrir tu perfil multimedia.
+        </p>
+
+    </div>
+
+</section>
+
+<section class="preparacion-quiz" id="quizfinal">
+
+    <h2>🚀 Preparación para el Quiz</h2>
+
+    <div class="quiz-ready">
+
+        <div class="quiz-checklist">
+
+            <h3>Durante este laboratorio exploraste:</h3>
+
+            <ul>
+
+                <li>✅ Áreas de la Ingeniería Multimedia</li>
+
+                <li>✅ Tecnologías utilizadas en el proyecto</li>
+
+                <li>✅ Recursos multimedia interactivos</li>
+
+                <li>✅ Animaciones y elementos visuales</li>
+
+                <li>✅ Perfiles profesionales multimedia</li>
+
+            </ul>
+
+        </div>
+
+        <div class="quiz-message">
+
+            <h3>NIA tiene un mensaje para ti</h3>
+
+            <p id="mensajeFinalQuiz">
+
+                Has completado el recorrido por el laboratorio multimedia.
+                Ahora es momento de poner a prueba tus conocimientos y demostrar todo lo que has aprendido.
+
+            </p>
+
+        </div>
+
+    </div>
+
+    <button
+        class="btn-primary"
+        onclick="irAlQuiz()">
+
+        🎯 Iniciar Quiz
+
+    </button>
+
+</section>
 
 
 

@@ -155,16 +155,18 @@ SECCIONES
 ========================= */
 
 .section{
+scroll-margin-top:140px ;
 min-height:100vh;
-
-
 max-width:1400px;
 margin:auto;
-
 padding:140px 40px 80px;
-
 .textherra{
     text-align: center;
+}
+.intro-lab {
+    margin-bottom: 10px;
+    text-align: center;
+    
 }
 
 }
@@ -183,7 +185,7 @@ padding:140px 40px 80px;
 
 .section h2{
 text-align:center;
-margin-bottom:30px;
+margin-bottom:10px;
 
 
 font-size:3rem;
@@ -330,6 +332,8 @@ background:linear-gradient(
 
 }
 
+
+
 .hero-text h2{
 text-align:left;
 margin-bottom:20px;
@@ -345,20 +349,15 @@ max-width:600px;
 
 .btn-primary{
 
-
+margin-bottom: 30px;
 background:var(--accent);
 color:var(--white);
-
 border:none;
 border-radius:50px;
-
 padding:25px 100px;
-
 cursor:pointer;
-
 font-size:25px;
 font-weight:700;
-
 transition:.3s;
 
 
@@ -925,7 +924,412 @@ ANIMACIONES
 
 }
 
+/* SECCION 2 LABORATORIO */
 
+.titulosecdos{
+    margin-top: 50px;
+    text-align: center;
+}
+
+.construccion-proyecto{
+    margin-top:5px;
+}
+
+.intro-construccion{
+    text-align:center;
+    margin-bottom:30px;
+    color:var(--gray);
+}
+
+.tecnologias-container{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+    margin-bottom:30px;
+}
+
+.tech-card{
+
+    width:220px;
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.1);
+
+    border-radius:var(--radius);
+
+    padding:25px;
+
+    text-align:center;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    font-size:1.2rem;
+    font-weight:600;
+}
+
+.tech-card:hover{
+    transform:translateY(-8px);
+    border-color:var(--secondary);
+}
+
+.tech-info{
+
+    max-width:900px;
+
+    margin:auto;
+
+    background:rgba(255,255,255,.08);
+
+    padding:30px;
+
+    border-radius:var(--radius);
+
+    text-align:center;
+}
+
+.tech-info h3{
+    color:var(--secondary);
+    margin-bottom:15px;
+}
+
+/* SECCION 3 LABORATORIO*/
+.multimedia-accion{
+    margin-top:80px;
+}
+
+.multimedia-botones{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+    margin:30px 0;
+}
+
+.multimedia-botones button{
+
+    background:var(--accent);
+
+    color:white;
+
+    border:none;
+
+    padding:15px 25px;
+
+    border-radius:50px;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.multimedia-botones button:hover{
+
+    transform:translateY(-5px);
+
+    background:var(--secondary);
+    color:var(--primary);
+}
+
+.multimedia-panel{
+
+    max-width:900px;
+
+    margin:auto;
+
+    padding:30px;
+
+    background:rgba(255,255,255,.08);
+
+    border-radius:var(--radius);
+
+    text-align:center;
+}
+
+.multimedia-panel img{
+
+    max-width:350px;
+
+    border-radius:15px;
+}
+
+.multimedia-panel video{
+
+    width:100%;
+
+    max-width:700px;
+
+    border-radius:15px;
+}
+
+.demo-animacion{
+
+    width:120px;
+    height:120px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    background:linear-gradient(
+        135deg,
+        var(--secondary),
+        var(--accent)
+    );
+
+    animation:girar 3s linear infinite;
+}
+
+@keyframes girar{
+
+    from{
+        transform:rotate(0deg);
+    }
+
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+/* =========================
+ECUALIZADOR MULTIMEDIA
+========================= */
+
+.equalizer{
+
+    display:flex;
+    justify-content:center;
+    align-items:flex-end;
+
+    gap:8px;
+
+    height:140px;
+
+    margin:30px 0;
+}
+
+.equalizer span{
+    box-shadow: 
+    0 0 10px rgba(203,41,87,.5),
+    0 0 20px rgba(159,161,255,.4),;
+    width:12px;
+    height:20px;
+    border-radius:20px;
+    background:linear-gradient(
+        to top,
+        var(--accent),
+        var(--secondary)
+    );
+    animation:equalizer 1s infinite ease-in-out;
+}
+
+/* Diferentes velocidades */
+
+.equalizer span:nth-child(1){
+    animation-delay:0s;
+}
+
+.equalizer span:nth-child(2){
+    animation-delay:.2s;
+}
+
+.equalizer span:nth-child(3){
+    animation-delay:.4s;
+}
+
+.equalizer span:nth-child(4){
+    animation-delay:.1s;
+}
+
+.equalizer span:nth-child(5){
+    animation-delay:.5s;
+}
+
+.equalizer span:nth-child(6){
+    animation-delay:.3s;
+}
+
+.equalizer span:nth-child(7){
+    animation-delay:.6s;
+}
+
+.equalizer span:nth-child(8){
+    animation-delay:.2s;
+}
+
+@keyframes equalizer{
+
+    0%,100%{
+
+        height:20px;
+    }
+
+    50%{
+
+        height:120px;
+    }
+}
+
+/* SECCION 4 LABORATORIO */
+.perfil-multimedia{
+    margin-top:80px;
+}
+
+.perfil-opciones{
+
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+
+    gap:20px;
+
+    margin:30px 0;
+}
+
+.perfil-opciones button{
+
+    background:var(--secondary);
+
+    color:var(--primary);
+
+    border:none;
+
+    padding:18px 25px;
+
+    border-radius:50px;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.perfil-opciones button:hover{
+
+    background:var(--accent);
+
+    color:white;
+
+    transform:translateY(-5px);
+}
+
+.perfil-resultado{
+    max-width:900px;
+    margin:auto;
+    background:rgba(255,255,255,.08);
+    padding:30px;
+    border-radius:var(--radius);
+    text-align:center;
+}
+
+/* SECCION 5 LABORATORIO */
+/* =========================
+PREPARACIÓN QUIZ
+========================= */
+
+.preparacion-quiz{
+
+    margin-top:100px;
+
+    text-align:center;
+}
+
+.quiz-ready{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:30px;
+
+    margin:40px 0;
+}
+
+.quiz-checklist,
+.quiz-message{
+
+    background:rgba(255,255,255,.08);
+
+    padding:30px;
+
+    border-radius:var(--radius);
+
+    border:1px solid rgba(255,255,255,.1);
+}
+
+.quiz-checklist ul{
+
+    margin-top:20px;
+
+    text-align:left;
+
+    line-height:2;
+}
+
+.quiz-message p{
+
+    margin-top:15px;
+
+    line-height:1.8;
+}
+
+@media(max-width:768px){
+
+    .quiz-ready{
+
+        grid-template-columns:1fr;
+    }
+
+}
+
+.lab-sidebar{
+
+    position:fixed;
+
+    left:20px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+    padding:20px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(10px);
+
+    border-radius:20px;
+
+    z-index:999;
+}
+
+.lab-sidebar a{
+
+    color:white;
+
+    padding:10px;
+
+    border-radius:12px;
+
+    transition:.3s;
+}
+
+.lab-sidebar a:hover{
+
+    background:var(--accent);
+}
 
 /* =========================
 RESPONSIVE
