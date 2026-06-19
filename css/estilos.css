@@ -155,7 +155,7 @@ SECCIONES
 ========================= */
 
 .section{
-scroll-margin-top:140px ;
+scroll-margin-top:220px ;
 min-height:100vh;
 max-width:1400px;
 margin:auto;
@@ -926,6 +926,22 @@ ANIMACIONES
 
 /* SECCION 2 LABORATORIO */
 
+.construccion-proyecto{
+    padding-top: 90px;
+}
+
+.multimedia-accion{
+    padding-top: 90px;
+}
+
+.perfil-multimedia{
+    padding-top: 95px;
+}
+
+.preparacion-quiz{
+    padding-top: 110px;
+}
+
 .titulosecdos{
     margin-top: 50px;
     text-align: center;
@@ -997,6 +1013,10 @@ ANIMACIONES
 }
 
 /* SECCION 3 LABORATORIO*/
+
+/* .section-laboratorio{
+    padding-top: 80px;
+} */
 .multimedia-accion{
     margin-top:80px;
 }
