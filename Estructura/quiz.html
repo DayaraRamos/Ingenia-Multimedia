@@ -50,54 +50,44 @@
     <!-- 07. QUIZ -->
     <!-- ========================= -->
 
-    <section id="quiz" class="section">
+    <section class="quiz-container">
 
-        <h2>Evaluación Interactiva</h2>
+    <h2>🎯 Quiz Final</h2>
 
-        <div class="quiz-container">
+    <div class="quiz-card">
 
-            <h3>Pregunta 1 de 5</h3>
+        <div class="quiz-header">
 
-            <p>
-                ¿Qué integra la Ingeniería Multimedia?
-            </p>
+            <span id="preguntaNumero">
+                Pregunta 1 de 5
+            </span>
 
-            <form>
-
-                <label>
-                    <input type="radio" name="pregunta">
-                    Solo diseño gráfico
-                </label>
-
-                <label>
-                    <input type="radio" name="pregunta">
-                    Tecnología y creatividad
-                </label>
-
-                <label>
-                    <input type="radio" name="pregunta">
-                    Solo programación
-                </label>
-
-                <label>
-                    <input type="radio" name="pregunta">
-                    Solo producción audiovisual
-                </label>
-
-            </form>
-
-            <button class="btn-primary" >
-                Responder
-            </button>
-
-            <div class="quiz-result">
-
-                Resultado de la evaluación
-
+            <div class="barra-progreso">
+                <div id="progreso"></div>
             </div>
 
         </div>
-        <div class="nia-fixed">
+
+        <h3 id="pregunta"></h3>
+
+        <div id="opciones" class="opciones"></div>
+
+        <button
+            id="btnSiguiente"
+            onclick="siguientePregunta()">
+
+            Siguiente
+        </button>
+
+    </div>
+
+    <div
+        id="resultadoFinal"
+        class="resultado-final">
+
+    </div>
+
+    <div class="nia-fixed">
                 <div class="nia-message">
                     <p>
                         Hola, soy NIA
@@ -108,7 +98,7 @@
                 </div>
 </div>
 
-    </section>
+</section>
 
 
 

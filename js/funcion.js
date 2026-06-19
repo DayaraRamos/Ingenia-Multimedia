@@ -450,16 +450,29 @@ function mostrarArea(
     speechSynthesis.speak(voz);
 }
 
+
 function mostrarTecnologia(
     titulo,
     descripcion,
-    icono
+    icono,
+    imagen
 ){
     document.getElementById("techTitulo").textContent =
     icono + " " + titulo;
 
     document.getElementById("techDescripcion").textContent=
     descripcion;
+
+    document.getElementById("tecnoimagen").src=imagen;
+
+    const contenedor =
+    document.getElementById("multimediaContenido");
+
+    
+
+
+
+
 
     hablar(descripcion);
 }
@@ -486,6 +499,9 @@ function mostrarMultimedia(tipo){
 
         contenedor.innerHTML = `
             <h3>🔊 Recurso de Audio</h3>
+            <video autoplay muted loop controls>
+                <source src="../elementos/videos/audio.mp4" type="video/mp4">
+            </video>
             <p>
                 NIA está reproduciendo una explicación mediante síntesis de voz.
             </p>
@@ -546,6 +562,8 @@ function mostrarPerfil(tipo){
     const descripcion =
     document.getElementById("perfilDescripcion");
 
+    let imagen = "";
+
     switch(tipo){
 
         case "web":
@@ -555,6 +573,9 @@ function mostrarPerfil(tipo){
 
             descripcion.textContent =
             "Te interesa la programación, la creación de sitios web y las experiencias digitales interactivas.";
+
+            imagen= 
+            "../elementos/imagenes/desarrollando.png";
 
             hablar(descripcion.textContent);
 
@@ -567,6 +588,9 @@ function mostrarPerfil(tipo){
 
             descripcion.textContent =
             "Te atrae la creatividad visual, la experiencia de usuario y el diseño de interfaces.";
+
+            imagen= 
+            "../elementos/imagenes/interfaces.png";
 
             hablar(descripcion.textContent);
 
@@ -596,6 +620,9 @@ function mostrarPerfil(tipo){
 
         break;
     }
+    document.getElementById(
+        "perfilimg"
+    ).src=imagen;
 }
 
 function irAlQuiz(){
@@ -612,3 +639,226 @@ function irAlQuiz(){
     }, 4000);
 
 }
+
+// APARTADO QUIZ
+const preguntas = [
+
+{
+pregunta:
+"¿Qué disciplina integra diseño, programación, audio y video?",
+
+opciones:[
+"Ingeniería Multimedia",
+"Administración",
+"Contaduría",
+"Medicina"
+],
+
+correcta:0
+},
+
+{
+pregunta:
+"¿Cuál es un área de la Ingeniería Multimedia?",
+
+opciones:[
+"Química",
+"Desarrollo Web",
+"Biología",
+"Arquitectura"
+],
+
+correcta:1
+},
+
+{
+pregunta:
+"¿Qué herramienta se utiliza para diseño de interfaces?",
+
+opciones:[
+"Figma",
+"Excel",
+"Word",
+"Notepad"
+],
+
+correcta:0
+},
+
+{
+pregunta:
+"¿Cuál es la primera fase del proceso multimedia?",
+
+opciones:[
+"Producción",
+"Implementación",
+"Preproducción",
+"Postproducción"
+],
+
+correcta:2
+},
+
+{
+pregunta:
+"¿Qué lenguaje aporta interactividad a una página web?",
+
+opciones:[
+"HTML",
+"CSS",
+"JavaScript",
+"PNG"
+],
+
+correcta:2
+}
+
+];
+
+let preguntaActual = 0;
+let puntaje = 0;
+
+function cargarPregunta(){
+
+const pregunta =
+document.getElementById("pregunta");
+
+if(!pregunta) return;
+
+const opciones =
+document.getElementById("opciones");
+
+const progreso =
+document.getElementById("progreso");
+
+document.getElementById(
+"preguntaNumero"
+).textContent =
+`Pregunta ${preguntaActual + 1} de ${preguntas.length}`;
+
+pregunta.textContent =
+preguntas[preguntaActual].pregunta;
+
+opciones.innerHTML = "";
+
+preguntas[preguntaActual]
+.opciones
+.forEach((opcion,index)=>{
+
+const boton =
+document.createElement("button");
+
+boton.classList.add("opcion");
+
+boton.textContent = opcion;
+
+boton.onclick = () =>
+seleccionarRespuesta(index);
+
+opciones.appendChild(boton);
+
+});
+
+progreso.style.width =
+`${((preguntaActual+1)/preguntas.length)*100}%`;
+}
+
+function seleccionarRespuesta(indice){
+
+    const botones=
+    document.querySelectorAll(".opcion");
+    
+
+botones.forEach(btn=>{
+btn.disabled = true;
+btn.classList.remove("seleccionada");
+});
+
+botones[indice].classList.add("seleccionada");
+
+if(
+    indice ===
+    preguntas[preguntaActual].correcta
+){
+    puntaje++;
+}
+}
+
+
+
+// if(
+// indice ===
+// preguntas[preguntaActual].correcta
+// ){
+
+// puntaje++;
+// }
+
+
+
+function siguientePregunta(){
+
+preguntaActual++;
+
+if(
+preguntaActual <
+preguntas.length
+){
+
+cargarPregunta();
+
+}else{
+
+mostrarResultado();
+
+}
+}
+
+function mostrarResultado(){
+
+document.querySelector(
+".quiz-card"
+).style.display="none";
+
+const resultado =
+document.getElementById(
+"resultadoFinal"
+);
+
+let mensaje = "";
+
+if(puntaje === 5){
+
+mensaje =
+"🏆 ¡Excelente! Eres un experto en Ingeniería Multimedia.";
+
+}else if(puntaje >= 4){
+
+mensaje =
+"🌟 Muy buen trabajo.";
+
+}else if(puntaje >= 3){
+
+mensaje =
+"👍 Buen desempeño.";
+
+}else{
+
+mensaje =
+"📚 Sigue explorando el contenido.";
+}
+
+resultado.innerHTML = `
+<h2>Quiz Finalizado</h2>
+<p>Obtuviste ${puntaje} de ${preguntas.length}</p>
+<p>${mensaje}</p>
+<button onclick="location.reload()">
+🔄 Intentar nuevamente
+</button>
+`;
+}
+
+document.addEventListener(
+"DOMContentLoaded",
+cargarPregunta
+);
