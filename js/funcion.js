@@ -468,12 +468,6 @@ function mostrarTecnologia(
     const contenedor =
     document.getElementById("multimediaContenido");
 
-    
-
-
-
-
-
     hablar(descripcion);
 }
 
@@ -604,6 +598,9 @@ function mostrarPerfil(tipo){
             descripcion.textContent =
             "Disfrutas contar historias mediante video, sonido y edición multimedia.";
 
+            imagen= 
+            "../elementos/imagenes/editor.png";
+
             hablar(descripcion.textContent);
 
         break;
@@ -616,6 +613,9 @@ function mostrarPerfil(tipo){
             descripcion.textContent =
             "Te apasiona crear experiencias interactivas, mundos virtuales y entretenimiento digital.";
 
+            imagen= 
+            "../elementos/imagenes/videojuegos.png";
+
             hablar(descripcion.textContent);
 
         break;
@@ -623,6 +623,7 @@ function mostrarPerfil(tipo){
     document.getElementById(
         "perfilimg"
     ).src=imagen;
+    document.getElementById("perfilimg").style.display="block"
 }
 
 function irAlQuiz(){
