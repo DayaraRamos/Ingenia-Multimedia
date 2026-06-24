@@ -198,33 +198,8 @@ audio.addEventListener("pause", () => {
 
     }
 
-    // ======================================
-    // PROCESO MULTIMEDIA
-    // ======================================
 
-    const fases =
-        document.querySelectorAll(".timeline-item");
 
-    const infoProceso =
-        document.getElementById("infoProceso");
-
-    if (
-        fases.length > 0 &&
-        infoProceso
-    ) {
-
-        fases.forEach(fase => {
-
-            fase.addEventListener("click", () => {
-
-                infoProceso.textContent =
-                    fase.dataset.info;
-
-            });
-
-        });
-
-    }
 
     // ======================================
     // EFECTOS DE APARICIÓN
@@ -421,9 +396,6 @@ function mostrarArea(
 
     document.getElementById("areaTitulo").textContent =
         titulo;
-
-    // document.getElementById("areaImagen").src =
-    //     imagen;
 
         const areaVideo =
     document.getElementById("areaVideo");
@@ -863,3 +835,53 @@ document.addEventListener(
 "DOMContentLoaded",
 cargarPregunta
 );
+
+    // ======================================
+    // PROCESO MULTIMEDIA
+    // ======================================
+
+    function mostrarProceso(
+    titulo,
+    video,
+    descripcion
+){
+
+    document.getElementById("tituloProceso").textContent =
+    titulo;
+
+    document.getElementById("contenedorVideo").innerHTML =
+    `
+    <iframe
+        width="100%"
+        height="500"
+        src="${video}"
+        title="${titulo}"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+    </iframe>
+    `;
+
+    //  const videoProceso =
+    // document.getElementById("videoProceso");
+
+    // videoProceso.style.display = "block";
+
+    // videoProceso.src = video;
+    // videoProceso.load();
+    // videoProceso.play();
+
+    document.getElementById("infoProceso").textContent =
+    descripcion;
+
+    // const voz =
+    //     new SpeechSynthesisUtterance(
+    //         "Este es el apartado proceso" + titulo + "Encargada de " + descripcion
+    //     );
+
+    // voz.lang = "es-CO";
+
+    // speechSynthesis.cancel();
+    // speechSynthesis.speak(voz);
+
+}

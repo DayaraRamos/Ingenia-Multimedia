@@ -65,23 +65,101 @@
 
         <div class="timeline">
 
-            <div class="timeline-item">Preproducción</div>
+    <div class="timeline-item"
+    onclick="mostrarProceso(
+    'Preproducción',
+    'https://youtube.com/embed/pR7wGddEsew',
+    'Durante esta fase se definieron los objetivos, la identidad visual, los wireframes y la planificación general del proyecto.'
+    )">
 
-            <div class="timeline-item">Producción</div>
+    Preproducción
 
-            <div class="timeline-item">Implementación</div>
+    </div>
 
-            <div class="timeline-item">Postproducción</div>
+    <div class="timeline-item"
+    onclick="mostrarProceso(
+    'Producción',
+    '../elementos/videos/produccion.mp4',
+    'En esta etapa se desarrolló la interfaz, los contenidos multimedia y los elementos interactivos del sitio web.'
+    )">
 
-        </div>
+    Producción
 
-        <div class="info-panel">
+    </div>
 
+    <div class="timeline-item"
+    onclick="mostrarProceso(
+    'Implementación',
+    '../elementos/videos/implementacion.mp4',
+    'Se integraron todas las secciones del proyecto y se realizaron pruebas de funcionamiento.'
+)">
+
+    Implementación
+
+    </div>
+
+    <div class="timeline-item"
+    onclick="mostrarProceso(
+    'Postproducción',
+    '../elementos/videos/postproduccion.mp4',
+    'Se realizaron ajustes finales, optimización y validación del proyecto multimedia.'
+    )">
+
+    Postproducción
+
+    </div>
+
+</div>
+
+<div class="info-panel">
+
+    <h2 id="tituloProceso" class="tituloproceso1">
+        Selecciona una fase
+    </h2>
+    <p id="infoProceso">
+        Selecciona una fase para conocer sus características.
+    </p><br>
+
+    <div id="contenedorVideo"></div>
+</div>
+
+<div id="detalleProceso" class="detalle-proceso">
+
+    <h3>Actividades realizadas</h3>
+
+    <div class="proceso-grid">
+
+        <div class="proceso-card">
+            <h4>Objetivo</h4>
             <p>
-                Selecciona una fase para conocer sus características.
+                Definición del propósito y alcance de Ingenia Multimedia.
             </p>
-
         </div>
+
+        <div class="proceso-card">
+            <h4>Diagnóstico</h4>
+            <p>
+                Identificación de necesidades y contenidos educativos.
+            </p>
+        </div>
+
+        <div class="proceso-card">
+            <h4>Identidad Visual</h4>
+            <p>
+                Creación del logo, avatar NIA y paleta de colores.
+            </p>
+        </div>
+
+        <div class="proceso-card">
+            <h4>Wireframes</h4>
+            <p>
+                Diseño de las pantallas y navegación del proyecto.
+            </p>
+        </div>
+
+    </div>
+
+</div>
         <div class="nia-fixed">
                 <div class="nia-message">
                     <p>
